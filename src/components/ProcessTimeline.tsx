@@ -60,7 +60,7 @@ export default function ProcessTimeline() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col group relative p-8 bg-white border border-luxury-beige rounded-[2rem] shadow-sm hover:border-luxury-bronze/40 hover:shadow-md transition-all duration-500"
+              className="flex flex-col group relative p-8 bg-white border border-luxury-beige rounded-xl shadow-sm hover:border-luxury-bronze/40 hover:shadow-md transition-all duration-500"
             >
               {/* Index & Phase */}
               <div className="flex justify-between items-baseline mb-6">

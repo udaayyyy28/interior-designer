@@ -32,7 +32,7 @@ export default function About() {
 
       {/* 2. Massive Widescreen Visual Block */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white group">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white group">
           <Image
             src="/images/project_villa.png"
             alt="Bitspace Interiors Hyderabad Studio"
@@ -44,7 +44,7 @@ export default function About() {
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-700" />
           
           {/* Subtle inside card detail line */}
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           <div className="absolute bottom-10 left-10 text-white z-10">
             <span className="text-[9px] tracking-[0.3em] uppercase opacity-75 block mb-1">
@@ -59,7 +59,7 @@ export default function About() {
 
       {/* 3. Widescreen Visual Panel 2 - Genesis (Replacing text and small image columns) */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white group">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white group">
           <Image
             src="/images/project_kitchen.png"
             alt="Genesis luxury kitchen design Hyderabad"
@@ -68,7 +68,7 @@ export default function About() {
             className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/15 group-hover:bg-black/10 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           <div className="absolute bottom-10 left-10 right-10 text-white z-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
@@ -119,7 +119,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.05 }}
               key={value.title}
-              className="bg-white p-8 rounded-[2rem] border border-luxury-beige flex flex-col justify-between min-h-[200px] group hover:border-luxury-bronze hover:shadow-md transition-all duration-500"
+              className="bg-white p-8 rounded-xl border border-luxury-beige flex flex-col justify-between min-h-[200px] group hover:border-luxury-bronze hover:shadow-md transition-all duration-500"
             >
               <div>
                 <div className="w-10 h-10 border border-luxury-beige bg-white flex items-center justify-center rounded-2xl mb-6 shadow-sm group-hover:border-luxury-bronze/50 transition-colors duration-500">
@@ -139,7 +139,7 @@ export default function About() {
 
       {/* 6. Enormous Cinematic Full-Width CTA Banner */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-8 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
           <Image
             src="/images/hero_bg.png"
             alt="Atelier Consultation Sanctuary"
@@ -148,7 +148,7 @@ export default function About() {
             className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/35 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           <div className="relative z-10 px-6 max-w-3xl text-white">
             <span className="text-[9px] tracking-[0.4em] uppercase font-semibold block mb-3 text-luxury-bronze">
@@ -165,7 +165,7 @@ export default function About() {
             
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-full hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
+              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-md hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
             >
               <span>Request Atelier Session</span>
               <ArrowRight size={14} />

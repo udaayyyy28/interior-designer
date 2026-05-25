@@ -39,7 +39,7 @@ export default function Navbar() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-2xl bg-black/85 backdrop-blur-md rounded-full px-5 py-3 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.35)] flex items-center justify-between transition-all duration-300"
+          className="w-full max-w-2xl bg-black/85 backdrop-blur-md rounded-2xl px-5 py-3 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.35)] flex items-center justify-between transition-all duration-300"
         >
           {/* Circular Stamp Logo */}
           <Link href="/" className="flex items-center space-x-2 shrink-0 group">
@@ -82,7 +82,7 @@ export default function Navbar() {
             {/* Desktop Capsule Button */}
             <Link
               href="/contact"
-              className="hidden md:inline-flex bg-white hover:bg-luxury-bronze text-black hover:text-white transition-all duration-300 rounded-full pl-4 pr-1.5 py-1.5 items-center space-x-2 text-[10px] tracking-[0.15em] uppercase font-semibold group shrink-0 shadow-sm border border-transparent"
+              className="hidden md:inline-flex bg-white hover:bg-luxury-bronze text-black hover:text-white transition-all duration-300 rounded-md pl-4 pr-1.5 py-1.5 items-center space-x-2 text-[10px] tracking-[0.15em] uppercase font-semibold group shrink-0 shadow-sm border border-transparent"
             >
               <span>Contact</span>
               <div className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-300 shrink-0">
@@ -149,7 +149,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center space-x-2 text-[12px] tracking-[0.2em] uppercase bg-white text-black px-8 py-4 rounded-full hover:bg-luxury-bronze hover:text-white transition-all duration-300 w-full font-semibold"
+                  className="inline-flex items-center justify-center space-x-2 text-[12px] tracking-[0.2em] uppercase bg-white text-black px-8 py-4 rounded-md hover:bg-luxury-bronze hover:text-white transition-all duration-300 w-full font-semibold"
                 >
                   <span>Book Consultation</span>
                   <ArrowRight size={14} />

@@ -155,7 +155,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="bg-white hover:bg-luxury-bronze text-black hover:text-white transition-all duration-300 rounded-full px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] shadow-lg border border-transparent animate-fade-in"
+            className="bg-white hover:bg-luxury-bronze text-black hover:text-white transition-all duration-300 rounded-md px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] shadow-lg border border-transparent animate-fade-in"
           >
             Start a Project
           </Link>
@@ -203,7 +203,7 @@ export default function Home() {
           </h2>
 
           {/* Massive widescreen full-screen-aligned image */}
-          <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border border-luxury-beige mb-8">
+          <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-2xl shadow-2xl border border-luxury-beige mb-8">
             <Image
               src="/images/project_villa.png"
               alt="Bitspace Interiors Luxury Villa Hyderabad"
@@ -212,7 +212,7 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/10" />
-            <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+            <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           </div>
 
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-6 gap-6">
@@ -252,7 +252,7 @@ export default function Home() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-2 text-[9px] tracking-[0.2em] uppercase transition-all duration-300 rounded-full border ${
+                  className={`px-4 py-2 text-[9px] tracking-[0.2em] uppercase transition-all duration-300 rounded-md border ${
                     activeCategory === category
                       ? "bg-luxury-charcoal text-white border-luxury-charcoal"
                       : "bg-transparent text-luxury-grey border-transparent hover:text-luxury-charcoal"
@@ -272,7 +272,7 @@ export default function Home() {
                 className="group cursor-pointer flex flex-col relative"
               >
                 {/* Massive Widescreen rounded card image */}
-                <div className="relative aspect-[21/9] md:aspect-[16/7] lg:aspect-[21/7] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white mb-6">
+                <div className="relative aspect-[21/9] md:aspect-[16/7] lg:aspect-[21/7] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white mb-6">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -281,7 +281,7 @@ export default function Home() {
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-[1200ms] ease-out"
                   />
                   <div className="absolute inset-0 bg-black/5" />
-                  <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+                  <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
                   
                   {/* Floating index */}
                   <div className="absolute top-8 left-8 font-sans font-light italic text-2xl text-white select-none">
@@ -310,7 +310,7 @@ export default function Home() {
           <div className="flex justify-center mt-20">
             <Link
               href="/projects"
-              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.25em] uppercase border border-luxury-charcoal px-8 py-4 text-luxury-charcoal hover:bg-luxury-charcoal hover:text-white transition-all duration-500 rounded-full font-semibold"
+              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.25em] uppercase border border-luxury-charcoal px-8 py-4 text-luxury-charcoal hover:bg-luxury-charcoal hover:text-white transition-all duration-500 rounded-md font-semibold"
             >
               <span>Explore Entire Lookbook</span>
               <ArrowRight size={12} />
@@ -343,7 +343,7 @@ export default function Home() {
               { title: "Modular Kitchens", image: "/images/project_kitchen.png" },
             ].map((service, idx) => (
               <div key={service.title} className="group relative cursor-pointer">
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-luxury-beige shadow-md mb-6">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-luxury-beige shadow-md mb-6">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -352,7 +352,7 @@ export default function Home() {
                     className="object-cover group-hover:scale-102 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
-                  <div className="absolute inset-6 border border-white/20 rounded-[1.2rem] pointer-events-none" />
+                  <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
                   
                   {/* Inside title */}
                   <div className="absolute bottom-6 left-6 text-white text-left">
@@ -391,10 +391,10 @@ export default function Home() {
             The Transformation Story
           </h2>
 
-          <div className="shadow-2xl border border-luxury-beige bg-white rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden">
+          <div className="shadow-2xl border border-luxury-beige bg-white rounded-2xl overflow-hidden">
             <BeforeAfterSlider
-              beforeImage="/images/before_room.png"
-              afterImage="/images/after_room.png"
+              beforeImage="/images/before_room_widescreen.png"
+              afterImage="/images/after_room_widescreen.png"
             />
           </div>
         </div>
@@ -465,7 +465,7 @@ export default function Home() {
             {instagramImages.map((img, idx) => (
               <div
                 key={idx}
-                className="relative aspect-square overflow-hidden group cursor-pointer border border-luxury-beige bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-sm"
+                className="relative aspect-square overflow-hidden group cursor-pointer border border-luxury-beige bg-white rounded-lg shadow-sm"
               >
                 <Image
                   src={img}
@@ -529,7 +529,7 @@ export default function Home() {
                   <button
                     type="submit"
                     onClick={(e) => e.preventDefault()}
-                    className="inline-flex items-center space-x-3 text-[10px] tracking-[0.25em] uppercase bg-luxury-charcoal text-white px-8 py-4 hover:bg-luxury-bronze transition-all duration-300 rounded-full font-semibold shadow-md cursor-pointer"
+                    className="inline-flex items-center space-x-3 text-[10px] tracking-[0.25em] uppercase bg-luxury-charcoal text-white px-8 py-4 hover:bg-luxury-bronze transition-all duration-300 rounded-md font-semibold shadow-md cursor-pointer"
                   >
                     <span>Submit Brief</span>
                     <ArrowUpRight size={14} />
@@ -560,18 +560,29 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative h-64 w-full mt-8 border border-luxury-beige rounded-[2rem] overflow-hidden filter grayscale hover:grayscale-0 transition-all duration-700 shadow-sm">
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Plot+no+112/A,+Road+No+44,+CBI+Colony,+Jubilee+Hills,+Hyderabad,+Telangana+500033"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative h-64 w-full mt-8 border border-luxury-beige rounded-xl overflow-hidden filter grayscale hover:grayscale-0 transition-all duration-700 shadow-sm block group cursor-pointer"
+              >
                 <iframe
                   title="Bitspace Interiors Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8272990928236!2d78.39958047587889!3d17.420088902534575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97470fcf1eb3%3A0xe10214a1a5b46e3!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Plot%20no%20112/A,%20Road%20No%2044,%20CBI%20Colony,%20Jubilee%20Hills,%20Hyderabad,%20Telangana%20500033&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
-                  style={{ border: 0 }}
+                  style={{ border: 0, pointerEvents: "none" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
-              </div>
+                {/* Click overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                  <span className="opacity-0 group-hover:opacity-100 bg-black/75 backdrop-blur-sm text-white text-[10px] tracking-[0.2em] uppercase font-semibold px-4 py-2.5 rounded-md transition-all duration-300 shadow-md">
+                    Open in Google Maps ↗
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

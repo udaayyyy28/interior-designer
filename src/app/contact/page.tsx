@@ -28,7 +28,7 @@ export default function Contact() {
       {/* Main Grid: Split Screen Widescreen Picture Left & Elegant Form Right */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16 items-stretch">
         {/* Left Column: Massive Full-Height Rounded Image Frame */}
-        <div className="lg:col-span-6 relative min-h-[450px] lg:min-h-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white group">
+        <div className="lg:col-span-6 relative min-h-[450px] lg:min-h-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white group">
           <Image
             src="/images/project_villa.png"
             alt="Jubilee Hills Salon Render"
@@ -38,7 +38,7 @@ export default function Contact() {
             className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           {/* Floating Details Stamp */}
           <div className="absolute bottom-10 left-10 text-white z-10">
@@ -52,7 +52,7 @@ export default function Contact() {
         </div>
 
         {/* Right Column: Clean White Rounded Form & Info Card */}
-        <div className="lg:col-span-6 flex flex-col justify-between bg-white border border-luxury-beige p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-sm">
+        <div className="lg:col-span-6 flex flex-col justify-between bg-white border border-luxury-beige p-8 md:p-12 rounded-2xl shadow-sm">
           <div>
             <div className="flex items-center space-x-3 mb-8">
               <span className="h-[1px] w-6 bg-luxury-bronze" />
@@ -133,7 +133,7 @@ export default function Contact() {
               <button
                 type="submit"
                 onClick={(e) => e.preventDefault()}
-                className="w-full inline-flex items-center justify-center space-x-3 text-[10px] tracking-[0.25em] uppercase bg-luxury-charcoal text-white py-4 hover:bg-luxury-bronze transition-all duration-500 cursor-pointer rounded-full font-semibold shadow-sm"
+                className="w-full inline-flex items-center justify-center space-x-3 text-[10px] tracking-[0.25em] uppercase bg-luxury-charcoal text-white py-4 hover:bg-luxury-bronze transition-all duration-500 cursor-pointer rounded-md font-semibold shadow-sm"
               >
                 <span>Submit Atelier Inquiry</span>
                 <ArrowRight size={14} />
@@ -165,7 +165,7 @@ export default function Contact() {
 
       {/* Address & Interactive Map section: Highly visual rounded map frame */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-luxury-beige p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-luxury-beige p-8 md:p-12 rounded-2xl shadow-sm">
           <div className="lg:col-span-5 text-left space-y-6">
             <div className="flex items-center space-x-3">
               <span className="h-[1px] w-6 bg-luxury-bronze" />
@@ -194,18 +194,29 @@ export default function Contact() {
           </div>
 
           {/* Large Map Frame */}
-          <div className="lg:col-span-7 aspect-[21/9] md:aspect-[16/7] w-full border border-luxury-beige rounded-[2rem] md:rounded-[2.5rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 relative shadow-sm">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Plot+no+112/A,+Road+No+44,+CBI+Colony,+Jubilee+Hills,+Hyderabad,+Telangana+500033"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:col-span-7 aspect-[21/9] md:aspect-[16/7] w-full border border-luxury-beige rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 relative shadow-sm block group cursor-pointer"
+          >
             <iframe
               title="Bitspace Interiors Hyderabad Studio"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8272990928236!2d78.39958047587889!3d17.420088902534575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97470fcf1eb3%3A0xe10214a1a5b46e3!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=Plot%20no%20112/A,%20Road%20No%2044,%20CBI%20Colony,%20Jubilee%20Hills,%20Hyderabad,%20Telangana%20500033&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{ border: 0, pointerEvents: "none" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </div>
+            {/* Click overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+              <span className="opacity-0 group-hover:opacity-100 bg-black/75 backdrop-blur-sm text-white text-[10px] tracking-[0.2em] uppercase font-semibold px-4 py-2.5 rounded-md transition-all duration-300 shadow-md">
+                Open in Google Maps ↗
+              </span>
+            </div>
+          </a>
         </div>
       </section>
     </div>

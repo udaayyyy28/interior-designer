@@ -101,7 +101,7 @@ export default function Projects() {
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
-                className={`px-6 py-2.5 text-[9px] tracking-widest uppercase transition-all duration-300 rounded-full border ${
+                className={`px-6 py-2.5 text-[9px] tracking-widest uppercase transition-all duration-300 rounded-md border ${
                   activeFilter === cat
                     ? "bg-luxury-charcoal text-white border-luxury-charcoal shadow-sm"
                     : "bg-transparent text-luxury-grey border-luxury-beige hover:border-luxury-charcoal hover:text-luxury-charcoal"
@@ -129,7 +129,7 @@ export default function Projects() {
                 className="group flex flex-col relative"
               >
                 {/* Lookbook Full-Screen Widescreen Card Frame */}
-                <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white mb-8">
+                <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white mb-8">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -140,7 +140,7 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-700" />
                   
                   {/* Fine interior frame line */}
-                  <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+                  <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
 
                   {/* Top-Right Index Stamp */}
                   <div className="absolute top-8 left-8 font-sans font-light italic text-3xl text-white/95 select-none">
@@ -182,7 +182,7 @@ export default function Projects() {
 
       {/* Cinematic Full-Width Booking CTA Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-8 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
           <Image
             src="/images/project_office.png"
             alt="Atelier Office Consulting Workspace"
@@ -191,7 +191,7 @@ export default function Projects() {
             className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/35 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           <div className="relative z-10 px-6 max-w-3xl text-white">
             <span className="text-[9px] tracking-[0.3em] uppercase font-semibold block mb-3 text-luxury-bronze">
@@ -208,7 +208,7 @@ export default function Projects() {
             
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-full hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
+              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-md hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
             >
               <span>Initiate Design Dialogue</span>
               <ArrowUpRight size={14} />

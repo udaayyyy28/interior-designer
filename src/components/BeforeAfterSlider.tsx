@@ -68,6 +68,9 @@ export default function BeforeAfterSlider({
     setIsDragging(true);
   };
 
+  const beforeOpacity = Math.max(0, Math.min(1, (sliderPosition - 15) / 15));
+  const afterOpacity = Math.max(0, Math.min(1, (85 - sliderPosition) / 15));
+
   return (
     <div
       ref={containerRef}
@@ -83,7 +86,10 @@ export default function BeforeAfterSlider({
         priority
       />
 
-      <div className="absolute right-6 top-6 z-10 glass-card-dark text-[10px] tracking-[0.2em] text-luxury-charcoal px-4 py-2 uppercase font-medium">
+      <div 
+        style={{ opacity: afterOpacity, pointerEvents: afterOpacity === 0 ? "none" : "auto", transition: "opacity 0.15s ease-out" }}
+        className="absolute right-6 top-6 z-10 glass-card-dark text-[10px] tracking-[0.2em] text-luxury-charcoal px-4 py-2 uppercase font-medium"
+      >
         {afterLabel}
       </div>
 
@@ -100,7 +106,10 @@ export default function BeforeAfterSlider({
           className="object-cover"
           priority
         />
-        <div className="absolute left-6 top-6 z-10 glass-card text-[10px] tracking-[0.2em] text-luxury-charcoal px-4 py-2 uppercase font-medium">
+        <div 
+          style={{ opacity: beforeOpacity, pointerEvents: beforeOpacity === 0 ? "none" : "auto", transition: "opacity 0.15s ease-out" }}
+          className="absolute left-6 top-6 z-10 glass-card text-[10px] tracking-[0.2em] text-luxury-charcoal px-4 py-2 uppercase font-medium"
+        >
           {beforeLabel}
         </div>
       </div>

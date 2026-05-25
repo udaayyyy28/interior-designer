@@ -70,7 +70,7 @@ export default function Services() {
               className="group flex flex-col relative"
             >
               {/* Massive Widescreen Rounded Service Image Block */}
-              <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white mb-6">
+              <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white mb-6">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -81,7 +81,7 @@ export default function Services() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-700" />
                 
                 {/* Frame Border Inside Card */}
-                <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+                <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
 
                 {/* Index badge */}
                 <div className="absolute top-8 left-8 flex items-center space-x-3 text-white">
@@ -106,7 +106,7 @@ export default function Services() {
                   {/* Small specs pills */}
                   <div className="flex flex-wrap gap-2 md:justify-end">
                     {service.specs.map((spec) => (
-                      <span key={spec} className="bg-white border border-luxury-beige px-4 py-2 rounded-full text-[9px] uppercase tracking-wider text-luxury-grey font-medium shadow-sm group-hover:border-luxury-bronze/50 transition-colors duration-500">
+                      <span key={spec} className="bg-white border border-luxury-beige px-4 py-2 rounded-md text-[9px] uppercase tracking-wider text-luxury-grey font-medium shadow-sm group-hover:border-luxury-bronze/50 transition-colors duration-500">
                         {spec}
                       </span>
                     ))}
@@ -120,7 +120,7 @@ export default function Services() {
 
       {/* Cinematic Widescreen Booking CTA Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-8 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
           <Image
             src="/images/project_villa.png"
             alt="Atelier Service Consultation"
@@ -129,7 +129,7 @@ export default function Services() {
             className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/35 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           <div className="relative z-10 px-6 max-w-3xl text-white">
             <span className="text-[9px] tracking-[0.3em] uppercase font-semibold block mb-3 text-luxury-bronze">
@@ -146,7 +146,7 @@ export default function Services() {
             
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-full hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
+              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-md hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
             >
               <span>Book Spatial Consultation</span>
               <ArrowUpRight size={14} />

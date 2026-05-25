@@ -57,7 +57,7 @@ export default function Process() {
 
       {/* Massive Full-Screen Cover Widescreen Visual Block */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige group">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige group">
           <Image
             src="/images/hero_bg.png"
             alt="Process Cover"
@@ -67,7 +67,7 @@ export default function Process() {
             className="object-cover scale-102 group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
         </div>
       </section>
 
@@ -102,7 +102,7 @@ export default function Process() {
               className="group flex flex-col relative"
             >
               {/* Massive Widescreen Rounded Phase Image Block */}
-              <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige bg-white mb-6">
+              <div className="relative aspect-[21/9] md:aspect-[21/7] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige bg-white mb-6">
                 <Image
                   src={phase.image}
                   alt={phase.title}
@@ -113,7 +113,7 @@ export default function Process() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-700" />
                 
                 {/* Inside card detail line */}
-                <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+                <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
 
                 {/* Left Index / Phase Label */}
                 <div className="absolute top-8 left-8 flex items-center space-x-3 text-white">
@@ -138,7 +138,7 @@ export default function Process() {
                   {/* Small deliverables pills */}
                   <div className="flex flex-wrap gap-2 md:justify-end">
                     {phase.deliverables.map((item) => (
-                      <span key={item} className="bg-white border border-luxury-beige px-4 py-2 rounded-full text-[9px] uppercase tracking-wider text-luxury-grey font-medium shadow-sm group-hover:border-luxury-bronze/50 transition-colors duration-500">
+                      <span key={item} className="bg-white border border-luxury-beige px-4 py-2 rounded-md text-[9px] uppercase tracking-wider text-luxury-grey font-medium shadow-sm group-hover:border-luxury-bronze/50 transition-colors duration-500">
                         {item}
                       </span>
                     ))}
@@ -152,7 +152,7 @@ export default function Process() {
 
       {/* Cinematic Full-Width Booking CTA Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-8 relative">
-        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
+        <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-xl border border-luxury-beige group flex items-center justify-center text-center">
           <Image
             src="/images/after_room.png"
             alt="Atelier Process Consulting Consultation"
@@ -161,7 +161,7 @@ export default function Process() {
             className="object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out"
           />
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/35 transition-colors duration-700" />
-          <div className="absolute inset-6 border border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] pointer-events-none" />
+          <div className="absolute inset-6 border border-white/20 rounded-lg pointer-events-none" />
           
           <div className="relative z-10 px-6 max-w-3xl text-white">
             <span className="text-[9px] tracking-[0.3em] uppercase font-semibold block mb-3 text-luxury-bronze">
@@ -178,7 +178,7 @@ export default function Process() {
             
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-full hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
+              className="inline-flex items-center space-x-3 text-[10px] tracking-[0.2em] uppercase bg-white text-luxury-charcoal px-8 py-4 rounded-md hover:bg-luxury-bronze hover:text-white transition-colors duration-300 shadow-md font-semibold"
             >
               <span>Initiate Design Dialogue</span>
               <ArrowUpRight size={14} />
