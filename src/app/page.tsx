@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -123,8 +123,24 @@ const instagramImages = [
   "/images/before_room.png",
 ];
 
+const heroBackgrounds = [
+  { src: "/images/hero_bg.png", alt: "Bitspace Interiors Luxury Living Room Hyderabad" },
+  { src: "/images/project_villa.png", alt: "Bitspace Interiors Bespoke Suite" },
+  { src: "/images/project_kitchen.png", alt: "Bitspace Interiors Minimalist Modular Kitchen" },
+  { src: "/images/project_office.png", alt: "Bitspace Interiors Creative Studio Atelier" },
+  { src: "/images/after_room_widescreen.png", alt: "Bitspace Interiors Timeless Living Space" },
+];
+
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBgIndex((prev) => (prev + 1) % heroBackgrounds.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
   const filteredProjects =
     activeCategory === "All"
@@ -135,15 +151,35 @@ export default function Home() {
     <div className="w-full bg-luxury-white text-luxury-charcoal overflow-x-hidden font-sans">
       {/* 1. Cinematic Hero Section */}
       <section className="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-luxury-white">
-        {/* Full-bleed background image */}
-        <div className="absolute inset-0 z-0 select-none">
-          <Image
-            src="/images/hero_bg.png"
-            alt="Bitspace Interiors Luxury Living Room Hyderabad"
-            fill
-            className="object-cover scale-[1.01]"
-            priority
-          />
+        {/* Full-bleed background slideshow with Ken Burns cross-fade */}
+        <div className="absolute inset-0 z-0 select-none overflow-hidden bg-luxury-white">
+          {heroBackgrounds.map((bg, idx) => {
+            const isActive = idx === currentBgIndex;
+            return (
+              <motion.div
+                key={bg.src}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{
+                  opacity: isActive ? 1 : 0,
+                  scale: isActive ? 1.01 : 1.05,
+                }}
+                transition={{
+                  opacity: { duration: 1.8, ease: "easeInOut" },
+                  scale: { duration: 6.5, ease: "linear" },
+                }}
+                className="absolute inset-0"
+                style={{ zIndex: isActive ? 1 : 0 }}
+              >
+                <Image
+                  src={bg.src}
+                  alt={bg.alt}
+                  fill
+                  priority={idx === 0}
+                  className="object-cover"
+                />
+              </motion.div>
+            );
+          })}
           {/* Vignette & contrast overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/55 z-10" />
         </div>
