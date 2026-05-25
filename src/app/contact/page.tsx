@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { MapPin, Clock, ArrowRight } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Phone, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -141,22 +141,30 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Quick Info Grid */}
-          <div className="mt-10 pt-8 border-t border-luxury-beige grid grid-cols-2 gap-4 text-left">
-            <div>
-              <span className="text-[9px] tracking-widest text-luxury-grey uppercase block mb-1">
-                Studio Line
-              </span>
-              <a href="tel:+918121347879" className="text-xs text-luxury-charcoal hover:text-luxury-bronze transition-colors font-medium">
-                +91 81213 47879
+          {/* Direct Call & WhatsApp Action Buttons */}
+          <div className="mt-10 pt-8 border-t border-luxury-beige">
+            <span className="text-[9px] tracking-[0.25em] text-luxury-grey uppercase block mb-4 font-semibold">
+              Direct Channels
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Call Button */}
+              <a
+                href="tel:+918121347879"
+                className="w-full inline-flex items-center justify-center space-x-3 border border-luxury-charcoal text-luxury-charcoal hover:bg-luxury-charcoal hover:text-white rounded-md py-3.5 text-[10px] tracking-[0.2em] uppercase font-semibold transition-all duration-300 shadow-sm"
+              >
+                <Phone size={14} className="shrink-0" />
+                <span>Call Studio Line</span>
               </a>
-            </div>
-            <div>
-              <span className="text-[9px] tracking-widest text-luxury-grey uppercase block mb-1">
-                WhatsApp Chat
-              </span>
-              <a href="https://wa.me/918121347879" target="_blank" rel="noreferrer" className="text-xs text-luxury-charcoal hover:text-luxury-bronze transition-colors font-medium">
-                Start Live Chat
+
+              {/* WhatsApp Button */}
+              <a
+                href="https://wa.me/918121347879"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center space-x-3 border border-[#25D366]/40 bg-[#25D366]/5 text-[#128C7E] hover:bg-[#25D366]/10 hover:text-[#075E54] rounded-md py-3.5 text-[10px] tracking-[0.2em] uppercase font-semibold transition-all duration-300 shadow-sm"
+              >
+                <MessageCircle size={14} className="shrink-0" />
+                <span>WhatsApp Chat</span>
               </a>
             </div>
           </div>
